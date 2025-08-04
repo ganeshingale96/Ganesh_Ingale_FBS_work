@@ -6,18 +6,39 @@
 # For unit above 250 Rs. 1.50/unit
 # An additional surcharge of 20% is added to the bill
 
-unit = int(input("enter the electricity unit charges: "))
-if(unit<=50):
-    cost = unit*0.50
-elif(unit>50 and unit<=150):
-    cost = unit*0.75
-elif(unit>150 and unit<=250):
-    cost = unit*1.20
-elif(unit>250):
-    cost = unit*1.50
+unit = int(input("enter the electricity units : "))
+cost = 110
+if(unit>0):
+    if(unit>50):
+        if(unit>150):
+            if(unit>250):
+                cost = 50*0.50
+                cost = 100*0.75
+                cost = 150*1.20
+                cost = cost+((unit-250)*1.50)
+                cost = cost + (cost * 0.2)
+                print(f'After the adding surcharge Total electricity bill is: {cost}')
+                
+            else:
+                cost = 50*0.50
+                cost = 100*0.75 
+                cost = cost+((unit-150)*1.20) 
+                cost = cost + (cost * 0.2)
+                print(f'After the adding surcharge Total electricity bill is: {cost}')
+                
+        else:
+            cost = 50*0.50
+            cost = cost+((unit-50)*0.75)
+            cost = cost + (cost * 0.2)
+            print(f'After the adding surcharge Total electricity bill is: {cost}')
+    else:
+        cost = unit*0.50
+        cost = cost + (cost * 0.2)
+        print(f'After the adding surcharge Total electricity bill is: {cost}')
+        
+else:
+    print("Please Enter Valid Units!!")
 
-print(f'The electricity bill is: {cost}')
-cost = cost + (cost * 0.2)
-print(f'After the adding surcharge Total electricity bill is: {cost}')
+
 
 
