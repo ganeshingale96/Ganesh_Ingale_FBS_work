@@ -7,8 +7,9 @@ ang3 = int(input("Enter the angle third: "))
 
 if(ang1==ang2==ang3):
     print("triangle is equilateral")
-elif(ang1==ang2 and ang2==ang3 and ang1==ang3):
+elif(ang1==ang2 or ang2==ang3 or ang1==ang3):
     print("triangle is isosceles")
 else:
     print(" triangle is scalene")
+
 
