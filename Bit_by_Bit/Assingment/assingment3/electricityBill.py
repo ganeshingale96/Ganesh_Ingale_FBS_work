@@ -14,7 +14,7 @@ if(unit>0):
             if(unit>250):
                 cost = 50*0.50
                 cost = 100*0.75
-                cost = 150*1.20
+                cost = 100*1.20
                 cost = cost+((unit-250)*1.50)
                 cost = cost + (cost * 0.2)
                 print(f'After the adding surcharge Total electricity bill is: {cost}')
@@ -38,6 +38,7 @@ if(unit>0):
         
 else:
     print("Please Enter Valid Units!!")
+
 
 
 
